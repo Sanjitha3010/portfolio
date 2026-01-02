@@ -18,6 +18,8 @@ function Navbar() {
         "education",
         "achievements",
         "skills",
+        "projects",
+        "focus",
         "contact",
       ];
 
@@ -57,12 +59,9 @@ function Navbar() {
           onClick={() => scrollToSection(item.id)}
           style={{
             ...navBtnStyle,
-            color:
-              activeSection === item.id ? "#3b82f6" : "white",
-            fontWeight:
-              activeSection === item.id ? "600" : "400",
-            opacity:
-              activeSection === item.id ? 1 : 0.7,
+            color: activeSection === item.id ? "#3b82f6" : "white",
+            fontWeight: activeSection === item.id ? "600" : "400",
+            opacity: activeSection === item.id ? 1 : 0.7,
           }}
         >
           {item.label}
@@ -79,6 +78,7 @@ const navItems = [
   { id: "achievements", label: "Achievements" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
+  { id: "focus", label: "Focus" },
   { id: "contact", label: "Contact" },
 ];
 

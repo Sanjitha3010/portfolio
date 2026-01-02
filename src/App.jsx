@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
+import Achievements from "./components/Achievements";
 
 function App() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -11,7 +12,7 @@ function App() {
       {/* Navbar */}
       <Navbar />
 
-      {/* Hero */}
+      {/* Hero Section */}
       <HeroSection />
 
       {/* About Section */}
@@ -90,89 +91,6 @@ function App() {
         </div>
       </div>
 
-      {/* Achievements Section */}
-      <div
-        id="achievements"
-        style={{
-          minHeight: "100vh",
-          backgroundColor: "#020617",
-          color: "white",
-          padding: "80px 40px",
-        }}
-      >
-        <h2 style={{ textAlign: "center", marginBottom: "50px" }}>
-          Achievements & Events
-        </h2>
-
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "30px",
-            justifyContent: "center",
-          }}
-        >
-          {[
-            {
-              id: 1,
-              title: "🥈 No Way Out",
-              place: "Thiagarajar College of Engineering",
-              desc:
-                "Secured 2nd Prize by demonstrating analytical thinking, problem-solving, and teamwork.",
-            },
-            {
-              id: 2,
-              title: "🥇 Prompt Engineering",
-              place: "Dhanalakshmi Srinivasan University",
-              desc:
-                "Won 1st Prize for designing effective AI prompts showcasing creativity and logical thinking.",
-            },
-            {
-              id: 3,
-              title: "🥉 Project Presentation",
-              place: "SRM Valliammai College",
-              desc:
-                "Awarded 3rd Prize for clear presentation and strong technical understanding.",
-            },
-          ].map((item) => (
-            <div
-              key={item.id}
-              onMouseEnter={() => setHoveredCard(item.id)}
-              onMouseLeave={() => setHoveredCard(null)}
-              style={{
-                backgroundColor: "#0f172a",
-                padding: "25px",
-                borderRadius: "16px",
-                width: "300px",
-                border:
-                  hoveredCard === item.id
-                    ? "1px solid #3b82f6"
-                    : "1px solid #1e293b",
-                transform:
-                  hoveredCard === item.id
-                    ? "translateY(-8px)"
-                    : "translateY(0)",
-                transition: "all 0.3s ease",
-              }}
-            >
-              <h3>{item.title}</h3>
-              <p style={{ opacity: 0.8, marginTop: "8px" }}>
-                {item.place}
-              </p>
-              <p
-                style={{
-                  marginTop: "12px",
-                  fontSize: "14px",
-                  opacity: 0.7,
-                }}
-              >
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Skills Section */}
       <div
         id="skills"
@@ -222,128 +140,15 @@ function App() {
             >
               <h3>{skill.title}</h3>
               <p style={{ marginTop: "10px", fontSize: "14px", opacity: 0.7 }}>
-                Beginner to intermediate level with strong foundational
-                understanding.
+                Beginner to intermediate level with strong foundational understanding.
               </p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Projects Section */}
-      <div
-        id="projects"
-        style={{
-          minHeight: "100vh",
-          backgroundColor: "#020617",
-          color: "white",
-          padding: "80px 40px",
-        }}
-      >
-        <h2 style={{ textAlign: "center", marginBottom: "50px" }}>
-          Projects
-        </h2>
-
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "30px",
-            justifyContent: "center",
-          }}
-        >
-          {/* Project 1 */}
-          <div
-            onMouseEnter={() => setHoveredCard("project1")}
-            onMouseLeave={() => setHoveredCard(null)}
-            style={{
-              backgroundColor: "#0f172a",
-              padding: "25px",
-              borderRadius: "16px",
-              width: "300px",
-              border:
-                hoveredCard === "project1"
-                  ? "1px solid #3b82f6"
-                  : "1px solid #1e293b",
-              transform:
-                hoveredCard === "project1"
-                  ? "translateY(-8px)"
-                  : "translateY(0)",
-              transition: "all 0.3s ease",
-            }}
-          >
-            <h3>Attendance Management System</h3>
-            <p style={{ marginTop: "10px", fontSize: "14px", opacity: 0.75 }}>
-              Built an offline attendance system using basic programming concepts
-              to understand data handling and logic implementation.
-            </p>
-            <p style={{ marginTop: "10px", fontSize: "13px", opacity: 0.6 }}>
-              Technologies: Python / C++
-            </p>
-          </div>
-
-          {/* Project 2 */}
-          <div
-            onMouseEnter={() => setHoveredCard("project2")}
-            onMouseLeave={() => setHoveredCard(null)}
-            style={{
-              backgroundColor: "#0f172a",
-              padding: "25px",
-              borderRadius: "16px",
-              width: "300px",
-              border:
-                hoveredCard === "project2"
-                  ? "1px solid #3b82f6"
-                  : "1px solid #1e293b",
-              transform:
-                hoveredCard === "project2"
-                  ? "translateY(-8px)"
-                  : "translateY(0)",
-              transition: "all 0.3s ease",
-            }}
-          >
-            <h3>AI & DS Mini Projects</h3>
-            <p style={{ marginTop: "10px", fontSize: "14px", opacity: 0.75 }}>
-              Practiced small AI and Data Science concepts through academic
-              assignments and learning-based mini projects.
-            </p>
-            <p style={{ marginTop: "10px", fontSize: "13px", opacity: 0.6 }}>
-              Technologies: Python, Basics of ML
-            </p>
-          </div>
-
-          {/* Project 3 */}
-          <div
-            onMouseEnter={() => setHoveredCard("project3")}
-            onMouseLeave={() => setHoveredCard(null)}
-            style={{
-              backgroundColor: "#0f172a",
-              padding: "25px",
-              borderRadius: "16px",
-              width: "300px",
-              border:
-                hoveredCard === "project3"
-                  ? "1px solid #3b82f6"
-                  : "1px solid #1e293b",
-              transform:
-                hoveredCard === "project3"
-                  ? "translateY(-8px)"
-                  : "translateY(0)",
-              transition: "all 0.3s ease",
-            }}
-          >
-            <h3>Prompt Engineering Tasks</h3>
-            <p style={{ marginTop: "10px", fontSize: "14px", opacity: 0.75 }}>
-              Worked on structured prompt design and experimentation during
-              competitions and learning sessions.
-            </p>
-            <p style={{ marginTop: "10px", fontSize: "13px", opacity: 0.6 }}>
-              Skills: Prompt Design, Logical Thinking
-            </p>
-          </div>
-        </div>
-      </div>
-
+      {/* Achievements Section (COMPONENT) */}
+      <Achievements />
 
       {/* Contact Section */}
       <div
