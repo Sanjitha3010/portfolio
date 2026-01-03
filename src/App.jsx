@@ -62,9 +62,7 @@ function App() {
             <p style={{ marginTop: "20px" }}>
               My journey in technology is driven by curiosity and a strong
               desire to learn. I believe in building solid foundations before
-              taking on complex challenges, and I’m currently focused on
-              mastering programming fundamentals while exploring the
-              fascinating world of AI.
+              taking on complex challenges.
             </p>
 
             <p style={{ marginTop: "20px" }}>
@@ -72,9 +70,7 @@ function App() {
               <span style={{ color: "#22d3ee" }}>
                 consistency, willingness to learn, and genuine curiosity
               </span>{" "}
-              about how technology can solve real-world problems. I’m at the
-              beginning of my journey, and I’m excited about where it will
-              lead.
+              about how technology can solve real-world problems.
             </p>
           </div>
 
@@ -212,159 +208,85 @@ function App() {
         </div>
       </div>
 
-      {/* Projects Section */}
-      <div
-        id="projects"
-        style={{
-          minHeight: "100vh",
-          backgroundColor: "#020617",
-          color: "white",
-          padding: "80px 40px",
-        }}
-      >
-        <h2 style={{ textAlign: "center", marginBottom: "50px" }}>
-          Projects
-        </h2>
-
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "30px",
-            justifyContent: "center",
-          }}
-        >
-          {[
-            {
-              id: "p1",
-              title: "Attendance Management System",
-              desc:
-                "Built an offline attendance system to understand data handling, logic building, and program flow.",
-              tech: "Python / C++",
-            },
-            {
-              id: "p2",
-              title: "AI & DS Mini Projects",
-              desc:
-                "Worked on small learning-based projects related to AI and Data Science concepts.",
-              tech: "Python, Basics of ML",
-            },
-            {
-              id: "p3",
-              title: "Prompt Engineering Tasks",
-              desc:
-                "Practiced structured prompt design and experimentation during competitions and learning sessions.",
-              tech: "Prompt Design, Logical Thinking",
-            },
-          ].map((project) => (
-            <div
-              key={project.id}
-              onMouseEnter={() => setHoveredCard(project.id)}
-              onMouseLeave={() => setHoveredCard(null)}
-              style={{
-                backgroundColor: "#0f172a",
-                padding: "25px",
-                borderRadius: "16px",
-                width: "300px",
-                border:
-                  hoveredCard === project.id
-                    ? "1px solid #3b82f6"
-                    : "1px solid #1e293b",
-                transform:
-                  hoveredCard === project.id
-                    ? "translateY(-8px)"
-                    : "translateY(0)",
-                transition: "all 0.3s ease",
-              }}
-            >
-              <h3>{project.title}</h3>
-              <p style={{ marginTop: "10px", fontSize: "14px", opacity: 0.75 }}>
-                {project.desc}
-              </p>
-              <p style={{ marginTop: "10px", fontSize: "13px", opacity: 0.6 }}>
-                Technologies: {project.tech}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Focus Section */}
-      <div
-        id="focus"
-        style={{
-          minHeight: "80vh",
-          backgroundColor: "#020617",
-          color: "white",
-          padding: "80px 40px",
-          textAlign: "center",
-        }}
-      >
-        <h2 style={{ marginBottom: "20px" }}>Current Focus</h2>
-
-        <p style={{ opacity: 0.75, maxWidth: "700px", margin: "0 auto 40px" }}>
-          Areas I am currently learning and improving to build a strong foundation
-          in Artificial Intelligence and Data Science.
-        </p>
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "25px",
-            flexWrap: "wrap",
-          }}
-        >
-          {[
-            "Python Programming",
-            "Data Structures & Logic Building",
-            "Basics of Machine Learning",
-            "Prompt Engineering",
-            "Problem Solving Skills",
-          ].map((item) => (
-            <div
-              key={item}
-              style={{
-                backgroundColor: "#0f172a",
-                padding: "16px 22px",
-                borderRadius: "999px",
-                fontSize: "14px",
-                border: "1px solid #1e293b",
-                opacity: 0.85,
-              }}
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Contact Section */}
-      <div
+      {/* Contact Section (UPDATED) */}
+      <section
         id="contact"
         style={{
           minHeight: "100vh",
           backgroundColor: "#020617",
           color: "white",
-          padding: "80px 40px",
-          textAlign: "center",
+          padding: "100px 40px",
         }}
       >
-        <h2>Contact</h2>
-        <p style={{ marginTop: "20px", opacity: 0.75 }}>
-          Feel free to reach out for collaboration or learning opportunities.
+        <h2 style={{ textAlign: "center", marginBottom: "10px" }}>
+          Get in <span style={{ color: "#3b82f6" }}>Touch</span>
+        </h2>
+
+        <p
+          style={{
+            textAlign: "center",
+            opacity: 0.7,
+            marginBottom: "60px",
+            fontSize: "16px",
+          }}
+        >
+          I’m always open to connecting with fellow learners and professionals
         </p>
-        <p style={{ marginTop: "10px", opacity: 0.6 }}>
-          Email and social links will be added soon.
-        </p>
-      </div>
+
+        <div
+          style={{
+            maxWidth: "520px",
+            margin: "0 auto",
+            backgroundColor: "#0f172a",
+            border: "1px solid #1e293b",
+            borderRadius: "18px",
+            padding: "40px 30px",
+            textAlign: "center",
+          }}
+        >
+          <p style={{ opacity: 0.8, marginBottom: "30px", lineHeight: "1.6" }}>
+            Contact details will be added soon. In the meantime, feel free to
+            connect with me on professional networks.
+          </p>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: "20px",
+              marginBottom: "30px",
+            }}
+          >
+            <div style={contactIconStyle}>🐙</div>
+            <div style={contactIconStyle}>💼</div>
+            <div style={contactIconStyle}>✉️</div>
+          </div>
+
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              backgroundColor: "#020617",
+              padding: "8px 16px",
+              borderRadius: "999px",
+              fontSize: "13px",
+              opacity: 0.7,
+            }}
+          >
+            <span style={{ color: "#22d3ee" }}>●</span>
+            Social links coming soon
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <Footer />
     </>
   );
 }
-/* About styles */
+
+/* Styles */
 const aboutCardStyle = {
   display: "flex",
   alignItems: "center",
@@ -389,6 +311,20 @@ const iconStyle = {
 const cardLabel = {
   fontSize: "13px",
   opacity: 0.7,
+};
+
+const contactIconStyle = {
+  width: "48px",
+  height: "48px",
+  borderRadius: "12px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "#020617",
+  border: "1px solid #1e293b",
+  fontSize: "20px",
+  cursor: "pointer",
+  transition: "all 0.3s ease",
 };
 
 export default App;
