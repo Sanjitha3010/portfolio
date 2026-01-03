@@ -1,7 +1,9 @@
 import { useState } from "react";
+import profileImg from "../assets/profile.jpg";
 
 function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
+  const [avatarHover, setAvatarHover] = useState(false);
 
   const scrollToAbout = () => {
     document.getElementById("about")?.scrollIntoView({
@@ -31,21 +33,45 @@ function HeroSection() {
       }}
     >
       {/* Avatar */}
-      <div
-        style={{
-          width: "120px",
-          height: "120px",
-          borderRadius: "50%",
-          border: "2px solid #3b82f6",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: "48px",
-          marginBottom: "20px",
-        }}
+      <a
+        href="https://www.linkedin.com/in/sanjitha-r-a88416380"
+        target="_blank"
+        rel="noreferrer"
+        onMouseEnter={() => setAvatarHover(true)}
+        onMouseLeave={() => setAvatarHover(false)}
+        style={{ textDecoration: "none" }}
       >
-        👤
-      </div>
+        <div
+          style={{
+            width: "140px",
+            height: "140px",
+            borderRadius: "50%",
+            border: "2px solid #3b82f6",
+            overflow: "hidden", // 🔥 MOST IMPORTANT FIX
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginBottom: "20px",
+            cursor: "pointer",
+            boxShadow: avatarHover
+              ? "0 0 25px rgba(59,130,246,0.6)"
+              : "none",
+            transform: avatarHover ? "scale(1.05)" : "scale(1)",
+            transition: "all 0.3s ease",
+          }}
+        >
+          <img
+            src={profileImg}
+            alt="R Sanjitha"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: "50%",
+            }}
+          />
+        </div>
+      </a>
 
       {/* Name */}
       <h1 style={{ fontSize: "48px", marginBottom: "10px" }}>
@@ -124,27 +150,9 @@ function HeroSection() {
         </a>
       </div>
 
-      {/* LinkedIn only */}
-      <div
-        style={{
-          marginTop: "25px",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <a
-          href="https://www.linkedin.com/in/sanjitha-r-a88416380"
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            color: "white",
-            textDecoration: "none",
-            opacity: 0.8,
-            fontSize: "16px",
-          }}
-        >
-          💼 LinkedIn
-        </a>
+      {/* LinkedIn label */}
+      <div style={{ marginTop: "25px", opacity: 0.8 }}>
+        💼 LinkedIn
       </div>
     </div>
   );
