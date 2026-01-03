@@ -18,34 +18,94 @@ function App() {
       </div>
 
       {/* About Section */}
-      <div
+      <section
         id="about"
         style={{
           minHeight: "100vh",
           backgroundColor: "#020617",
           color: "white",
-          padding: "80px 40px",
+          padding: "100px 40px",
         }}
       >
-        <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
-          About Me
+        <h2 style={{ textAlign: "center", marginBottom: "10px" }}>
+          About <span style={{ color: "#3b82f6" }}>Me</span>
         </h2>
 
         <p
           style={{
-            maxWidth: "700px",
-            margin: "0 auto",
             textAlign: "center",
-            lineHeight: "1.7",
-            opacity: 0.75,
+            opacity: 0.7,
+            marginBottom: "60px",
+            fontSize: "16px",
           }}
         >
-          I am a 2nd-year B.Tech student pursuing Artificial Intelligence and
-          Data Science at SRM TRP Engineering College. I focus on building
-          strong programming fundamentals and actively participate in
-          inter-college events to improve my technical and communication skills.
+          A passionate learner at the start of an exciting tech journey
         </p>
-      </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1.3fr 1fr",
+            gap: "50px",
+            maxWidth: "1100px",
+            margin: "0 auto",
+          }}
+        >
+          {/* Left Content */}
+          <div style={{ lineHeight: "1.8", opacity: 0.85 }}>
+            <p>
+              Hello! I’m <strong>R Sanjitha</strong>, a dedicated 2nd-year
+              B.Tech student specializing in Artificial Intelligence and Data
+              Science at SRM TRP Engineering College.
+            </p>
+
+            <p style={{ marginTop: "20px" }}>
+              My journey in technology is driven by curiosity and a strong
+              desire to learn. I believe in building solid foundations before
+              taking on complex challenges, and I’m currently focused on
+              mastering programming fundamentals while exploring the
+              fascinating world of AI.
+            </p>
+
+            <p style={{ marginTop: "20px" }}>
+              What sets me apart is my{" "}
+              <span style={{ color: "#22d3ee" }}>
+                consistency, willingness to learn, and genuine curiosity
+              </span>{" "}
+              about how technology can solve real-world problems. I’m at the
+              beginning of my journey, and I’m excited about where it will
+              lead.
+            </p>
+          </div>
+
+          {/* Right Cards */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+            <div style={aboutCardStyle}>
+              <div style={iconStyle}>📘</div>
+              <div>
+                <p style={cardLabel}>2nd Year Student</p>
+                <h4>B.Tech AI & DS</h4>
+              </div>
+            </div>
+
+            <div style={aboutCardStyle}>
+              <div style={iconStyle}>💻</div>
+              <div>
+                <p style={cardLabel}>Languages</p>
+                <h4>Python, C, C++</h4>
+              </div>
+            </div>
+
+            <div style={aboutCardStyle}>
+              <div style={iconStyle}>✨</div>
+              <div>
+                <p style={cardLabel}>Focus</p>
+                <h4>AI & Data Science</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Education Section */}
       <div
@@ -304,5 +364,31 @@ function App() {
     </>
   );
 }
+/* About styles */
+const aboutCardStyle = {
+  display: "flex",
+  alignItems: "center",
+  gap: "16px",
+  backgroundColor: "#0f172a",
+  padding: "20px",
+  borderRadius: "14px",
+  border: "1px solid #1e293b",
+};
+
+const iconStyle = {
+  width: "48px",
+  height: "48px",
+  borderRadius: "12px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  background: "linear-gradient(135deg, #3b82f6, #22d3ee)",
+  fontSize: "22px",
+};
+
+const cardLabel = {
+  fontSize: "13px",
+  opacity: 0.7,
+};
 
 export default App;
