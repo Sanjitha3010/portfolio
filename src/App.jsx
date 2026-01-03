@@ -5,9 +5,9 @@ import Footer from "./components/Footer";
 import Achievements from "./components/Achievements";
 
 /* 🔗 UPDATE THESE WITH YOUR REAL LINKS */
-const GITHUB_URL = "https://github.com/your-username";
-const LINKEDIN_URL = "https://www.linkedin.com/in/your-username/";
-const EMAIL_URL = "mailto:yourmail@gmail.com";
+const GITHUB_URL = "https://github.com/Sanjitha3010";
+const LINKEDIN_URL = "https://www.linkedin.com/in/sanjitha-r-a88416380";
+const EMAIL_URL = "mailto:sanjitharaja30@gmail.com";
 
 function App() {
   const [hoveredCard, setHoveredCard] = useState(null);
