@@ -4,10 +4,11 @@ import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
 import Achievements from "./components/Achievements";
 
-/* 🔗 UPDATE THESE WITH YOUR REAL LINKS */
+/* 🔗 YOUR REAL LINKS */
 const GITHUB_URL = "https://github.com/Sanjitha3010";
 const LINKEDIN_URL = "https://www.linkedin.com/in/sanjitha-r-a88416380";
-const EMAIL_URL = "mailto:sanjitharaja30@gmail.com";
+const EMAIL_URL =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=sanjitha3010@gmail.com";
 
 function App() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -251,10 +252,10 @@ function App() {
           }}
         >
           <p style={{ opacity: 0.8, marginBottom: "30px" }}>
-            Contact details will be added soon. In the meantime, feel free to
-            connect with me on professional networks.
+            Feel free to connect with me on professional networks
           </p>
 
+          {/* Clickable Icons */}
           <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
             <a href={GITHUB_URL} target="_blank" rel="noreferrer" style={iconLinkStyle}>
               <div style={contactIconStyle}>🐙</div>
@@ -264,9 +265,27 @@ function App() {
               <div style={contactIconStyle}>💼</div>
             </a>
 
-            <a href={EMAIL_URL} style={iconLinkStyle}>
+            <a href={EMAIL_URL} target="_blank" rel="noreferrer" style={iconLinkStyle}>
               <div style={contactIconStyle}>✉️</div>
             </a>
+          </div>
+
+          {/* Status Badge */}
+          <div
+            style={{
+              marginTop: "30px",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              backgroundColor: "#020617",
+              padding: "8px 16px",
+              borderRadius: "999px",
+              fontSize: "13px",
+              opacity: 0.75,
+            }}
+          >
+            <span style={{ color: "#22d3ee" }}>●</span>
+            Social links active
           </div>
         </div>
       </section>
