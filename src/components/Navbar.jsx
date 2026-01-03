@@ -47,27 +47,13 @@ function Navbar() {
         backgroundColor: "rgba(2, 6, 23, 0.9)",
         backdropFilter: "blur(10px)",
         display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "16px 40px",
+        justifyContent: "center",
+        gap: "30px",
+        padding: "16px 0",
         zIndex: 1000,
         borderBottom: "1px solid #1e293b",
       }}
     >
-      {/* Logo / Home */}
-      <button
-        onClick={() => scrollToSection("home")}
-        style={{
-          background: "none",
-          border: "none",
-          color: "white",
-          fontSize: "16px",
-          fontWeight: "600",
-          cursor: "pointer",
-        }}
-      >
-        Sanjitha
-      </button>
 
       {/* Nav Items */}
       <div style={{ display: "flex", gap: "26px" }}>
