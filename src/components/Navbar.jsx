@@ -38,7 +38,7 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
+   return (
     <div
       style={{
         position: "fixed",
@@ -47,26 +47,45 @@ function Navbar() {
         backgroundColor: "rgba(2, 6, 23, 0.9)",
         backdropFilter: "blur(10px)",
         display: "flex",
-        justifyContent: "center",
-        gap: "30px",
-        padding: "16px 0",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "16px 40px",
         zIndex: 1000,
+        borderBottom: "1px solid #1e293b",
       }}
     >
-      {navItems.map((item) => (
-        <button
-          key={item.id}
-          onClick={() => scrollToSection(item.id)}
-          style={{
-            ...navBtnStyle,
-            color: activeSection === item.id ? "#3b82f6" : "white",
-            fontWeight: activeSection === item.id ? "600" : "400",
-            opacity: activeSection === item.id ? 1 : 0.7,
-          }}
-        >
-          {item.label}
-        </button>
-      ))}
+      {/* Logo / Home */}
+      <button
+        onClick={() => scrollToSection("home")}
+        style={{
+          background: "none",
+          border: "none",
+          color: "white",
+          fontSize: "16px",
+          fontWeight: "600",
+          cursor: "pointer",
+        }}
+      >
+        Sanjitha
+      </button>
+
+      {/* Nav Items */}
+      <div style={{ display: "flex", gap: "26px" }}>
+        {navItems.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => scrollToSection(item.id)}
+            style={{
+              ...navBtnStyle,
+              color: activeSection === item.id ? "#3b82f6" : "white",
+              fontWeight: activeSection === item.id ? "600" : "400",
+              opacity: activeSection === item.id ? 1 : 0.7,
+            }}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
