@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 function Achievements() {
+  const [hoveredCard, setHoveredCard] = useState(null);
+
   return (
     <section
       id="achievements"
@@ -32,7 +36,21 @@ function Achievements() {
         }}
       >
         {/* Achievement 1 */}
-        <div style={cardStyle}>
+        <div
+          onMouseEnter={() => setHoveredCard("a1")}
+          onMouseLeave={() => setHoveredCard(null)}
+          style={{
+            ...cardStyle,
+            border:
+              hoveredCard === "a1"
+                ? "1px solid #3b82f6"
+                : "1px solid #1e293b",
+            transform:
+              hoveredCard === "a1"
+                ? "translateY(-8px)"
+                : "translateY(0)",
+          }}
+        >
           <h3>🥈 Runner-Up – No Way Out</h3>
           <p style={eventStyle}>TECHUTSAV’25 – PANORAMA</p>
           <p style={collegeStyle}>
@@ -48,7 +66,21 @@ function Achievements() {
         </div>
 
         {/* Achievement 2 */}
-        <div style={cardStyle}>
+        <div
+          onMouseEnter={() => setHoveredCard("a2")}
+          onMouseLeave={() => setHoveredCard(null)}
+          style={{
+            ...cardStyle,
+            border:
+              hoveredCard === "a2"
+                ? "1px solid #3b82f6"
+                : "1px solid #1e293b",
+            transform:
+              hoveredCard === "a2"
+                ? "translateY(-8px)"
+                : "translateY(0)",
+          }}
+        >
           <h3>🥇 Winner – Prompt Engineering</h3>
           <p style={eventStyle}>TechFlare 2K25</p>
           <p style={collegeStyle}>
@@ -64,7 +96,21 @@ function Achievements() {
         </div>
 
         {/* Achievement 3 */}
-        <div style={cardStyle}>
+        <div
+          onMouseEnter={() => setHoveredCard("a3")}
+          onMouseLeave={() => setHoveredCard(null)}
+          style={{
+            ...cardStyle,
+            border:
+              hoveredCard === "a3"
+                ? "1px solid #3b82f6"
+                : "1px solid #1e293b",
+            transform:
+              hoveredCard === "a3"
+                ? "translateY(-8px)"
+                : "translateY(0)",
+          }}
+        >
           <h3>🥉 Second Runner-Up – Project Presentation</h3>
           <p style={eventStyle}>MEDARZT’25 – National Level Symposium</p>
           <p style={collegeStyle}>
@@ -89,7 +135,6 @@ const cardStyle = {
   padding: "25px",
   borderRadius: "16px",
   width: "320px",
-  border: "1px solid #1e293b",
   transition: "all 0.3s ease",
 };
 
