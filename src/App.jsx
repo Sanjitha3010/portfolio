@@ -68,7 +68,9 @@ function App() {
             <p style={{ marginTop: "20px" }}>
               My journey in technology is driven by curiosity and a strong desire
               to learn. I believe in building solid foundations before taking on
-              complex challenges.
+              complex challenges, and I'm currently focused on mastering
+              programming fundamentals while exploring the fascinating world
+              of AI.
             </p>
 
             <p style={{ marginTop: "20px" }}>
@@ -76,7 +78,8 @@ function App() {
               <span style={{ color: "#22d3ee" }}>
                 consistency, willingness to learn, and genuine curiosity
               </span>{" "}
-              about how technology can solve real-world problems.
+              about how technology can solve real-world problems.I'm at the 
+              beginning of my journey, and I'm excited about where it will lead.
             </p>
           </div>
 
@@ -214,7 +217,7 @@ function App() {
           ))}
         </div>
       </div>
-      
+
       {/* Projects Section */}
       <div
         id="projects"
