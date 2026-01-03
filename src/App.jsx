@@ -4,6 +4,11 @@ import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
 import Achievements from "./components/Achievements";
 
+/* 🔗 UPDATE THESE WITH YOUR REAL LINKS */
+const GITHUB_URL = "https://github.com/your-username";
+const LINKEDIN_URL = "https://www.linkedin.com/in/your-username/";
+const EMAIL_URL = "mailto:yourmail@gmail.com";
+
 function App() {
   const [hoveredCard, setHoveredCard] = useState(null);
 
@@ -54,15 +59,15 @@ function App() {
           {/* Left Content */}
           <div style={{ lineHeight: "1.8", opacity: 0.85 }}>
             <p>
-              Hello! I’m <strong>R Sanjitha</strong>, a dedicated 2nd-year
-              B.Tech student specializing in Artificial Intelligence and Data
-              Science at SRM TRP Engineering College.
+              Hello! I’m <strong>R Sanjitha</strong>, a dedicated 2nd-year B.Tech
+              student specializing in Artificial Intelligence and Data Science at
+              SRM TRP Engineering College.
             </p>
 
             <p style={{ marginTop: "20px" }}>
-              My journey in technology is driven by curiosity and a strong
-              desire to learn. I believe in building solid foundations before
-              taking on complex challenges.
+              My journey in technology is driven by curiosity and a strong desire
+              to learn. I believe in building solid foundations before taking on
+              complex challenges.
             </p>
 
             <p style={{ marginTop: "20px" }}>
@@ -103,7 +108,7 @@ function App() {
         </div>
       </section>
 
-      {/* Education Section */}
+      {/* Education */}
       <div
         id="education"
         style={{
@@ -149,10 +154,10 @@ function App() {
         </div>
       </div>
 
-      {/* Achievements Section */}
+      {/* Achievements */}
       <Achievements />
 
-      {/* Skills Section */}
+      {/* Skills */}
       <div
         id="skills"
         style={{
@@ -201,14 +206,15 @@ function App() {
             >
               <h3>{skill.title}</h3>
               <p style={{ marginTop: "10px", fontSize: "14px", opacity: 0.7 }}>
-                Beginner to intermediate level with strong foundational understanding.
+                Beginner to intermediate level with strong foundational
+                understanding.
               </p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Contact Section (UPDATED) */}
+      {/* Contact Section */}
       <section
         id="contact"
         style={{
@@ -244,43 +250,27 @@ function App() {
             textAlign: "center",
           }}
         >
-          <p style={{ opacity: 0.8, marginBottom: "30px", lineHeight: "1.6" }}>
+          <p style={{ opacity: 0.8, marginBottom: "30px" }}>
             Contact details will be added soon. In the meantime, feel free to
             connect with me on professional networks.
           </p>
 
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "20px",
-              marginBottom: "30px",
-            }}
-          >
-            <div style={contactIconStyle}>🐙</div>
-            <div style={contactIconStyle}>💼</div>
-            <div style={contactIconStyle}>✉️</div>
-          </div>
+          <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+            <a href={GITHUB_URL} target="_blank" rel="noreferrer" style={iconLinkStyle}>
+              <div style={contactIconStyle}>🐙</div>
+            </a>
 
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              backgroundColor: "#020617",
-              padding: "8px 16px",
-              borderRadius: "999px",
-              fontSize: "13px",
-              opacity: 0.7,
-            }}
-          >
-            <span style={{ color: "#22d3ee" }}>●</span>
-            Social links coming soon
+            <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" style={iconLinkStyle}>
+              <div style={contactIconStyle}>💼</div>
+            </a>
+
+            <a href={EMAIL_URL} style={iconLinkStyle}>
+              <div style={contactIconStyle}>✉️</div>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </>
   );
@@ -325,6 +315,10 @@ const contactIconStyle = {
   fontSize: "20px",
   cursor: "pointer",
   transition: "all 0.3s ease",
+};
+
+const iconLinkStyle = {
+  textDecoration: "none",
 };
 
 export default App;
