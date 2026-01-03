@@ -52,6 +52,7 @@ function Navbar() {
         padding: "16px 0",
         zIndex: 1000,
         borderBottom: "1px solid #1e293b",
+        boxSizing: "border-box",
       }}
     >
 
