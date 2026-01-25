@@ -1,3 +1,12 @@
+## Project Ownership
+
+This project was designed, developed, and maintained solely by **Sanjitha R (Sanjitha3010)**.
+
+Any other names shown under “Contributors” are due to historical GitHub attribution  
+and do not reflect active development or ownership.
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
